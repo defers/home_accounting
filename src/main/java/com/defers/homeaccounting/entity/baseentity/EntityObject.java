@@ -5,10 +5,11 @@ import org.hibernate.annotations.UpdateTimestamp;
 
 import javax.persistence.*;
 import javax.swing.text.html.parser.Entity;
+import java.io.Serializable;
 import java.time.LocalDateTime;
 
 @MappedSuperclass
-public abstract class EntityObject {
+public abstract class EntityObject implements Serializable {
 
     @Id
     @Column(name = "id")
