@@ -1,0 +1,102 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+}
+
+a {
+  color: black;
+}
+
+li {
+  list-style-type: none;
+  color: black;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.list-menu {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  padding-right: 10px;
+  width: 100vw;
+  max-width: 100%;
+}
+
+.menu-element {
+  max-width: 80px;
+  width: 100%;
+  padding: 10px;
+}
+.menu-element:hover {
+  background-color: rgba(140, 181, 255, 0.2);
+}
+
+.headline {
+  font-size: 2rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.error {
+  color: red;
+  margin: 20px;
+  width: 100%;
+  border-style: solid;
+  border-color: red;
+  border-radius: 5px;
+  font-size: 1.5rem;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.card {
+  border-style: solid;
+  border-color: black;
+  border-radius: 5px;
+  width: 60vw;
+  padding: 20px;
+  margin: 20px auto 0;
+}
+.card:hover {
+  transform: scale(1.05);
+  transition: all 0.5s ease-in-out;
+}
+
+.list-field {
+  margin: 5px;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.btn {
+  max-width: 80px;
+  width: 100%;
+  padding: 3px;
+  margin-right: 10px;
+  text-align: center;
+  color: black;
+  border-style: solid;
+  border-color: black;
+  border-radius: 5px;
+}
+.btn:hover {
+  background-color: rgba(140, 181, 255, 0.2);
+}
+
+/*# sourceMappingURL=style.css.map */

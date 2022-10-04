@@ -2,19 +2,19 @@ package com.defers.homeaccounting.entity.currency;
 
 import com.defers.homeaccounting.entity.baseentity.EntityObject;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
 @Table(name="currency")
 public class Currency extends EntityObject {
 
+    @Id
     @Column(name = "code")
     private String code;
-    @Column(name = "is_active")
-    private boolean isActive;
+
+    @Column(name = "is_active", columnDefinition = "boolean default true")
+    private boolean active;
 
     public Currency() {
         super();
@@ -29,11 +29,11 @@ public class Currency extends EntityObject {
     }
 
     public boolean isActive() {
-        return isActive;
+        return active;
     }
 
     public void setActive(boolean active) {
-        isActive = active;
+        this.active = active;
     }
 
     @Override
@@ -41,14 +41,13 @@ public class Currency extends EntityObject {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Currency currency = (Currency) o;
-        return isActive == currency.isActive &&
+        return active == currency.active &&
                 code.equals(currency.code) &&
-                getId() == currency.getId() &&
                 getName() == currency.getName();
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(code, isActive, getId(), getName());
+        return Objects.hash(code, active, getName());
     }
 }

@@ -93,6 +93,20 @@
                     </excludes>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.flywaydb</groupId>
+                <artifactId>flyway-maven-plugin</artifactId>
+                <version>6.5.5</version>
+                <configuration>
+                    <url>jdbc:postgresql://localhost:5432/home_accounting</url>
+                    <user>postgres</user>
+                    <password>admin</password>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 

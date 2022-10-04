@@ -5,18 +5,16 @@ import org.hibernate.annotations.UpdateTimestamp;
 
 import javax.persistence.*;
 import javax.swing.text.html.parser.Entity;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 
 @MappedSuperclass
 public abstract class EntityObject implements Serializable {
 
-    @Id
-    @Column(name = "id")
-    @SequenceGenerator(name = "id_generator", sequenceName = "id_sequence", allocationSize = 1)
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "id_generator")
-    private Long id;
-
+    @NotNull(message = "Field <name> can not be null")
+    @NotBlank(message = "Field <name> can not be blank")
     @Column(name = "name")
     private String name;
 
@@ -33,10 +31,6 @@ public abstract class EntityObject implements Serializable {
 
     public EntityObject(){
 
-    }
-
-    public Long getId() {
-        return id;
     }
 
     public String getName() {
