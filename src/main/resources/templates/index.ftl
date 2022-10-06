@@ -1,6 +1,7 @@
-<#include "components/open-body.ftl"/>
-    <#include "components/header.ftl"/>
+<#import "components/macros/common.ftl" as common />
+
+<@common.page>
     <div class="test">
         Hello - ${name}
     </div>
-<#include "components/close-body.ftl"/>
+</@common.page>

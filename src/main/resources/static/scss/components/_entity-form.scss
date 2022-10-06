@@ -1,0 +1,56 @@
+
+.entity-caption {
+  text-align: center;
+  margin: 1rem;
+}
+
+.form-entity {
+  margin: 0 auto;
+  margin-top: 10vh;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 60vw;
+  border: black solid;
+  border-radius: 5px;
+  gap:2px;
+  padding: 10px;
+  align-items: start;
+
+  &__field-container{
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    max-width: 60vw;
+    width: 80%;
+  }
+
+  &__label {
+    margin-right: 10px;
+    max-width: 80px;
+    width: 100%;
+  }
+
+  &__field {
+    width: 100%;
+    border-radius: 3px;
+    padding: 3px;
+  }
+}
+
+.btn {
+  max-width: 100px;
+  width: 100%;
+  padding: 3px;
+  margin-right: 10px;
+  text-align: center;
+  color: black;
+  border-style: solid;
+  border-color: black;
+  border-radius: 5px; 
+
+  &:hover{
+    background-color: $hover-color;
+  }
+}

@@ -1,11 +1,17 @@
 @import "components/variables";
 @import "components/config";
 @import "components/header";
+@import "components/entity-form";
+@import "components/form-elements";
+
+.page-content {
+  padding-top: $header-size * 1.5;
+}
 
 // Cards
 
 .headline{
-  font-size: $header-size;
+  font-size: $headline-size;
   margin: 0 auto;
   text-align: center;
 }
@@ -46,30 +52,3 @@
   margin: 5px;
 }
 
-// Elements
-.container{
-  display: flex;
-  flex-direction: row;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-.btn{
-  max-width: 80px;
-  width: 100%;
-  padding: 3px;
-  margin-right: 10px;
-  text-align: center;
-  color: black;
-  border-style: solid;
-  border-color: black;
-  border-radius: 5px;
-
-  &:hover{
-    background-color: $hover-color;
-  }
-}
-
-.btn-card{
-
-}

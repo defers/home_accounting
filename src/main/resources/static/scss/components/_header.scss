@@ -1,6 +1,13 @@
 
 // Header
 
+.header {
+  position: fixed;
+  background: linear-gradient(45deg, $gradient-color-start, $gradient-color-end);
+  height: $header-size;
+  z-index: 100;
+}
+
 .list-menu{
   display: flex;
   flex-direction: row;

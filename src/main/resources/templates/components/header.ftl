@@ -1,5 +1,8 @@
 <header class="header" id="header">
     <ul class="list-menu">
+        <li class="list-menu__element" name="home">
+            <a href="/">Home</a>
+        </li>
         <li class="list-menu__element" name="currency">
             <a href="/currency">Currency</a>
         </li>

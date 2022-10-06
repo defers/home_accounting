@@ -1,11 +1,13 @@
 package com.defers.homeaccounting.entity.currency;
 
+import com.defers.homeaccounting.utils.Exceptions;
 import net.bytebuddy.implementation.bytecode.Throw;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.EntityNotFoundException;
+import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 
 @Service
@@ -22,13 +24,18 @@ public class CurrencyService {
     }
 
     @Transactional
-    public void save(Currency currency) {
-        currencyRepo.save(currency);
+    public Currency save(Currency currency) {
+        return currencyRepo.save(currency);
     }
 
     @Transactional
     public Currency findByCode(String code) {
         Currency currency = currencyRepo.findByCode(code);
+
+        if (currency == null) {
+            Exceptions.throwException(EntityNotFoundException.class, "Currency with code: %s not found",  code);
+        }
+
         return currency;
     }
 
@@ -44,9 +51,7 @@ public class CurrencyService {
             currency.setDeleted(!currency.isDeleted());
         }
         else {
-            throw new EntityNotFoundException(
-                    String.format("Currency with code: %s not found", code));
+            Exceptions.throwException(EntityNotFoundException.class, "Currency with code: %s not found",  code);
         }
     }
-
 }

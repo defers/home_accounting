@@ -2,6 +2,7 @@ package com.defers.homeaccounting.entity.baseentity;
 
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import javax.swing.text.html.parser.Entity;
@@ -22,10 +23,12 @@ public abstract class EntityObject implements Serializable {
     private boolean deleted;
 
     @CreationTimestamp
-    @Column(name = "created_date")
+    @DateTimeFormat(pattern="yyyy-MM-dd HH:mm:ss")
+    @Column(name = "created_date", updatable = false)
     private LocalDateTime createdDate;
 
     @UpdateTimestamp
+    @DateTimeFormat(pattern="yyyy-MM-dd HH:mm:ss")
     @Column(name = "updated_date")
     private LocalDateTime updatedDate;
 

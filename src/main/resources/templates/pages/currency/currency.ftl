@@ -3,17 +3,19 @@
 
 <#--<#include "../components/open-body.ftl"/>-->
 <@common.page>
-<#include "../../components/header.ftl"/>
     <div class="headline">
         ${entityName}
     </div>
-
 
     <#if error??>
         <div class="error">
             ERROR: ${error}
         </div>
     </#if>
+
+    <div class="entity-button-panel">
+        <a href="${path}/new" class="btn" id="add">New</a>
+    </div>
 
     <div class="cards">
 
@@ -26,7 +28,7 @@
             <@macrosfields.cardField id="createdDate" fieldName="Created date" value="${entity.createdDate}"/>
             <@macrosfields.cardField id="updatedDate" fieldName="Updated date" value="${entity.updatedDate}"/>
             <div class="container">
-                <a href="${path}\${entity.code}" class="btn" id="edit">Edit</a>
+                <a href="${path}\${entity.code}\edit" class="btn" id="edit">Edit</a>
                 <a href="${path}\${entity.code}\delete" class="btn" id="delete">Delete</a>
             </div>
         </div>
