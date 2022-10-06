@@ -1,51 +1,6 @@
-
-// Variables
-$header-size: 2rem;
-$error-size: 1.5rem;
-$hover-color: rgba(#8cb5ff, 0.2);
-
-// Main
-
-*{
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  text-decoration:none;
-}
-
-a{
-  color: black;
-}
-
-li{
-  list-style-type: none;
-  color: black;
-}
-
-ul{
-  list-style-type: none;
-}
-
-// Header
-
-.list-menu{
-  display: flex;
-  flex-direction: row;
-  text-align: center;
-  padding-right: 10px;
-  width: 100vw;
-  max-width: 100%;
-}
-
-.menu-element{
-  max-width: 80px;
-  width: 100%;
-  padding: 10px;
-
-  &:hover{
-    background-color: $hover-color;
-  }
-}
+@import "components/variables";
+@import "components/config";
+@import "components/header";
 
 // Cards
 

@@ -1,7 +1,9 @@
-<#import "../components/macros/macros-fields.ftl" as macrosfields/>
+<#import "../../components/macros/macros-fields.ftl" as macrosfields/>
+<#import "../../components/macros/common.ftl" as common/>
 
-<#include "../components/open-body.ftl"/>
-    <#include "../components/header.ftl"/>
+<#--<#include "../components/open-body.ftl"/>-->
+<@common.page>
+<#include "../../components/header.ftl"/>
     <div class="headline">
         ${entityName}
     </div>
@@ -30,4 +32,5 @@
         </div>
     </#list>
     </div>
-<#include "../components/close-body.ftl"/>
+<#--<#include "../components/close-body.ftl"/>-->
+</@common.page>

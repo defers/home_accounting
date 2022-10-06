@@ -1,0 +1,23 @@
+
+// Header
+
+.list-menu{
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  padding-right: 10px;
+  width: 100vw;
+  max-width: 100%;
+
+  &__element{
+    max-width: 80px;
+    width: 100%;
+    padding: 10px;
+
+    &:hover{
+      background-color: $hover-color;
+    }
+  }
+
+}
+

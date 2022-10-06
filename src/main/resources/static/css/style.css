@@ -26,13 +26,12 @@ ul {
   width: 100vw;
   max-width: 100%;
 }
-
-.menu-element {
+.list-menu__element {
   max-width: 80px;
   width: 100%;
   padding: 10px;
 }
-.menu-element:hover {
+.list-menu__element:hover {
   background-color: rgba(140, 181, 255, 0.2);
 }
 

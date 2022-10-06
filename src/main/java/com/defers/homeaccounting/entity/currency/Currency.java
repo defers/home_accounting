@@ -1,6 +1,7 @@
 package com.defers.homeaccounting.entity.currency;
 
 import com.defers.homeaccounting.entity.baseentity.EntityObject;
+import lombok.Builder;
 
 import javax.persistence.*;
 import java.util.Objects;
