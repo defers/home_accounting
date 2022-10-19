@@ -3,52 +3,10 @@
 @import "components/header";
 @import "components/entity-form";
 @import "components/form-elements";
+@import "components/cards";
 
 .page-content {
   padding-top: $header-size * 1.5;
 }
 
-// Cards
-
-.headline{
-  font-size: $headline-size;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.error {
-  color: red;
-  margin: 20px;
-  width: 100%;
-  border-style: solid;
-  border-color: red;
-  border-radius: 5px;
-  font-size: $error-size;
-}
-
-.cards{
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin: 0 auto;
-}
-
-.card{
-  border-style: solid;
-  border-color: black;
-  border-radius: 5px;
-  width: 60vw;
-  padding: 20px;
-  margin: 20px auto 0;
-
-  &:hover{
-      transform: scale(1.05);
-      transition: all 0.5s ease-in-out;
-    }
-}
-
-.list-field{
-  margin: 5px;
-}
 

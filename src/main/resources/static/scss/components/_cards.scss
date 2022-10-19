@@ -1,0 +1,66 @@
+// Cards
+
+.headline{
+  font-size: $headline-size;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.error {
+  color: red;
+  margin: 20px;
+  width: 100%;
+  border-style: solid;
+  border-color: red;
+  border-radius: 5px;
+  font-size: $error-size;
+}
+
+.cards{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.card{
+  border-style: solid;
+  border-color: black;
+  border-radius: 5px;
+  width: 40vw;
+  padding: 20px;
+  margin: 20px auto 0;
+
+  &:hover{
+    transform: scale(1.05);
+    transition: all 0.5s ease-in-out;
+  }
+}
+
+.list-field{
+  margin: 5px;
+}
+
+.page-numbers{
+  display: flex;
+  width: 90vw;
+  margin: 0 auto;
+  padding: 5px;
+
+  &--page{
+    padding-left: 15px;
+    font-size: 1.2rem;
+  }
+
+}
+
+@media(max-width: 800px) {
+  .cards{
+    display: flex;
+  }
+  .card{
+    width: 60vw;
+  }
+}
