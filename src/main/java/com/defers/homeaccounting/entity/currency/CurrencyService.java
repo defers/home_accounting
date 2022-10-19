@@ -1,14 +1,13 @@
 package com.defers.homeaccounting.entity.currency;
 
 import com.defers.homeaccounting.utils.Exceptions;
-import net.bytebuddy.implementation.bytecode.Throw;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
 import javax.persistence.EntityNotFoundException;
-import java.lang.reflect.InvocationTargetException;
 import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 @Service
 public class CurrencyService {
@@ -21,6 +20,11 @@ public class CurrencyService {
         List<Currency> currencys = currencyRepo.findAll();
 
         return currencys;
+    }
+
+    public Map<String, String> findAllMapValues() {
+        return findAll().stream()
+                .collect(Collectors.toMap(k -> k.getCode(), v -> v.getName()));
     }
 
     @Transactional

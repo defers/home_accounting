@@ -23,10 +23,10 @@
         </div>
 
         <#if currency.createdDate??>
-        <p>Created date: ${currency.createdDate}</p>
+        <p>Created date: ${(currency.createdDate).format('yyyy-MM-dd HH:mm:ss')}</p>
         </#if>
         <#if currency.updatedDate??>
-        <p>Updated date: ${currency.updatedDate}</p>
+        <p>Updated date: ${(currency.updatedDate).format('yyyy-MM-dd HH:mm:ss')}</p>
         </#if>
 
         <input type="submit" class="btn btn-submit" id="save-btn" value="Save"/>

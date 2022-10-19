@@ -1,11 +1,11 @@
 package com.defers.homeaccounting.entity.baseentity;
 
+import lombok.Builder;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
-import javax.swing.text.html.parser.Entity;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import java.io.Serializable;
@@ -34,6 +34,11 @@ public abstract class EntityObject implements Serializable {
 
     public EntityObject(){
 
+    }
+
+    public EntityObject(String name, boolean deleted) {
+        this.name = name;
+        this.deleted = deleted;
     }
 
     public String getName() {

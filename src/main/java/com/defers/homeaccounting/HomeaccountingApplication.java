@@ -20,10 +20,10 @@ public class HomeaccountingApplication {
         ConfigurableApplicationContext context = SpringApplication.run(HomeaccountingApplication.class, args);
 
 
-        CurrencyService currencyService1 = context.getBean("currencyService", CurrencyService.class);
-        List<Currency> currencys = currencyService1.findAll();
-        currencys.stream()
-                .forEach(System.out::println);
+//        CurrencyService currencyService1 = context.getBean("currencyService", CurrencyService.class);
+//        List<Currency> currencys = currencyService1.findAll();
+//        currencys.stream()
+//                .forEach(System.out::println);
 
     }
 

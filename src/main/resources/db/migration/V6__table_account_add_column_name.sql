@@ -1,0 +1,1 @@
+ALTER TABLE account ADD COLUMN name varchar(255) not null;

@@ -12,7 +12,7 @@ public class Payee extends EntityObject {
 
     @Id
     @Column(name = "id")
-    @SequenceGenerator(name = "id_generator", sequenceName = "payee_id_seq", allocationSize = 1)
+    @SequenceGenerator(name = "id_generator", sequenceName = "payee_id_seq", allocationSize = 10)
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "id_generator")
     private Long id;
 

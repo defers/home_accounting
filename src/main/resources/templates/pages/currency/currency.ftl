@@ -25,8 +25,8 @@
             <@macrosfields.cardField id="code" fieldName="Code" value="${entity.code}"/>
             <@macrosfields.cardField id="active" fieldName="Active" value="${entity.active?c}"/>
             <@macrosfields.cardField id="deleted" fieldName="Deleted" value="${entity.deleted?c}"/>
-            <@macrosfields.cardField id="createdDate" fieldName="Created date" value="${entity.createdDate}"/>
-            <@macrosfields.cardField id="updatedDate" fieldName="Updated date" value="${entity.updatedDate}"/>
+            <@macrosfields.cardField id="createdDate" fieldName="Created date" value="${(entity.createdDate).format('yyyy-MM-dd HH:mm:ss')}"/>
+            <@macrosfields.cardField id="updatedDate" fieldName="Updated date" value="${(entity.updatedDate).format('yyyy-MM-dd HH:mm:ss')}"/>
             <div class="container">
                 <a href="${path}\${entity.code}\edit" class="btn" id="edit">Edit</a>
                 <a href="${path}\${entity.code}\delete" class="btn" id="delete">Delete</a>
