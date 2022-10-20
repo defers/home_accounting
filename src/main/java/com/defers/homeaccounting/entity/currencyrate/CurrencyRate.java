@@ -1,6 +1,8 @@
 package com.defers.homeaccounting.entity.currencyrate;
 
 import com.defers.homeaccounting.entity.currency.Currency;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
@@ -10,43 +12,22 @@ import java.time.LocalDateTime;
 import java.util.Objects;
 
 @Entity
+@AllArgsConstructor
 @Table(name = "currency_rate",
         uniqueConstraints = {@UniqueConstraint(columnNames = {"date", "currency_id"})})
 public class CurrencyRate implements Serializable {
 
-    @NotBlank(message = "Field <date> can not be blank!")
-    @NotNull(message = "Field <date> can not be blank!")
-    @Id
-    @Column(name = "date")
-    private LocalDateTime date;
+    private static final long serialVersionUID = 100001L;
 
-    @Id
-    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    @JoinColumn(name = "currency_id")
-    private Currency currency;
+    @EmbeddedId
+    private CurrencyRateId currencyRateId;
 
     @Column(name = "rate")
-    private int rate;
+    private float rate;
 
     public CurrencyRate(){}
 
-    public LocalDateTime getDate() {
-        return date;
-    }
-
-    public void setDate(LocalDateTime theDate) {
-        date = theDate;
-    }
-
-    public Currency getCurrency() {
-        return currency;
-    }
-
-    public void setCurrency(Currency theCurrency) {
-        currency = theCurrency;
-    }
-
-    public int getRate() {
+    public float getRate() {
         return rate;
     }
 
@@ -54,18 +35,55 @@ public class CurrencyRate implements Serializable {
         rate = theRate;
     }
 
+    public CurrencyRateId getCurrencyRateId(){
+        return this.currencyRateId;
+    }
+
+    public void setCurrencyRateId(CurrencyRateId currencyRateId) {
+        this.currencyRateId = currencyRateId;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (!(o instanceof CurrencyRate)) return false;
         CurrencyRate that = (CurrencyRate) o;
-        return rate == that.rate &&
-                date.equals(that.date) &&
-                currency.equals(that.currency);
+        return Float.compare(that.rate, rate) == 0 &&
+                currencyRateId.equals(that.currencyRateId);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(date, currency, rate);
+        return Objects.hash(currencyRateId, rate);
     }
+
+    public static CurrencyRateBuilder builder() {
+        return new CurrencyRateBuilder();
+    }
+
+    private static class CurrencyRateBuilder {
+        private LocalDateTime date;
+        private Currency currency;
+        private float rate;
+
+        public CurrencyRateBuilder date(LocalDateTime date) {
+            this.date = date;
+            return this;
+        }
+
+        public CurrencyRateBuilder currency(Currency currency) {
+            this.currency = currency;
+            return this;
+        }
+
+        public CurrencyRateBuilder rate(float rate){
+            this.rate = rate;
+            return this;
+        }
+
+        public CurrencyRate build() {
+            return new CurrencyRate(new CurrencyRateId(date, currency), rate);
+        }
+    }
+
 }

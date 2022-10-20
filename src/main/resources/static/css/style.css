@@ -21,8 +21,9 @@ ul {
 .header {
   position: fixed;
   background: linear-gradient(45deg, rgb(216, 239, 241), rgb(103, 188, 196));
-  height: 2.5rem;
+  height: 3rem;
   z-index: 100;
+  width: 100%;
 }
 
 .list-menu {
@@ -32,16 +33,91 @@ ul {
   padding-right: 10px;
   width: 100vw;
   max-width: 100%;
+  height: auto;
 }
 .list-menu__element {
   max-width: 80px;
   width: 100%;
   padding: 10px;
+  height: 3rem;
 }
 .list-menu__element:hover {
   background-color: rgba(140, 181, 255, 0.2);
 }
 
+.burger-btn {
+  display: none;
+}
+
+.burger-btn-container {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .list-menu {
+    display: none;
+    position: absolute;
+    right: -70%;
+    top: 3rem;
+    flex-direction: column;
+    background: linear-gradient(0deg, rgb(216, 239, 241), rgb(103, 188, 196));
+  }
+  .list-menu.menu-list-open {
+    display: block;
+  }
+  .burger-btn-container {
+    display: block;
+    position: absolute;
+    right: 5%;
+    width: 30px;
+    height: 3rem;
+    cursor: pointer;
+    transition: all ease-in-out 0.5s;
+  }
+  .burger-btn-container.active-burger-btn .burger-btn {
+    transform: rotate(45deg);
+    transition: all ease-in-out 0.5s;
+  }
+  .burger-btn-container.active-burger-btn .burger-btn::after {
+    transform: rotate(-90deg);
+    top: 0;
+    transition: all ease-in-out 0.5s;
+  }
+  .burger-btn-container.active-burger-btn .burger-btn::before {
+    display: none;
+    transition: all ease-in-out 0.5s;
+  }
+  .burger-btn {
+    display: block;
+    position: absolute;
+    top: 1.5rem;
+    width: 30px;
+    height: 5px;
+    background-color: black;
+    cursor: pointer;
+    transition: all ease-in-out 0.5s;
+  }
+  .burger-btn::before {
+    display: block;
+    position: absolute;
+    top: -0.6rem;
+    width: 30px;
+    height: 5px;
+    background-color: black;
+    content: "";
+    transition: all ease-in-out 0.5s;
+  }
+  .burger-btn::after {
+    display: block;
+    position: absolute;
+    top: 0.6rem;
+    width: 30px;
+    height: 5px;
+    background-color: black;
+    content: "";
+    transition: all ease-in-out 0.5s;
+  }
+}
 .entity-caption {
   text-align: center;
   margin: 1rem;
@@ -185,7 +261,7 @@ ul {
   }
 }
 .page-content {
-  padding-top: 3.75rem;
+  padding-top: 4.5rem;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -6,6 +6,7 @@
   background: linear-gradient(45deg, $gradient-color-start, $gradient-color-end);
   height: $header-size;
   z-index: 100;
+  width: 100%;
 }
 
 .list-menu{
@@ -15,11 +16,13 @@
   padding-right: 10px;
   width: 100vw;
   max-width: 100%;
+  height: auto;
 
   &__element{
     max-width: 80px;
     width: 100%;
     padding: 10px;
+    height: $header-size;
 
     &:hover{
       background-color: $hover-color;
@@ -28,3 +31,85 @@
 
 }
 
+.burger-btn{
+  display: none;
+}
+
+.burger-btn-container{
+  display: none;
+}
+
+@media(max-width: 800px) {
+  .list-menu{
+    display: none;
+    position: absolute;
+    right: -70%;
+    top: $header-size;
+    flex-direction: column;
+    background: linear-gradient(0deg, rgb(216, 239, 241), rgb(103, 188, 196));
+
+    &.menu-list-open {
+      display: block;
+    }
+  }
+
+  .burger-btn-container{
+    display: block;
+    position: absolute;
+    right: 5%;
+    width: 30px;
+    height: $header-size;
+    cursor: pointer;
+    @include transition;
+
+    &.active-burger-btn .burger-btn{
+      transform: rotate(45deg);
+      @include transition;
+    }
+    &.active-burger-btn .burger-btn::after{
+      transform: rotate(-90deg);
+      top: 0;
+      @include transition;
+    }
+    &.active-burger-btn .burger-btn::before{
+      display: none;
+      @include transition;
+    }
+  }
+
+  .burger-btn{
+    display: block;
+    position: absolute;
+    top: $header-size / 2;
+    width: 30px;
+    height: 5px;
+    background-color: black;
+    cursor: pointer;
+    @include transition;
+
+    &::before{
+      display: block;
+      position: absolute;
+      top: -0.6rem;
+      width: 30px;
+      height: 5px;
+      background-color: black;
+      content: '';
+      @include transition;
+    }
+    &::after{
+      display: block;
+      position: absolute;
+      top: 0.6rem;
+      width: 30px;
+      height: 5px;
+      background-color: black;
+      content: '';
+      @include transition;
+    }
+
+  }
+
+
+
+}

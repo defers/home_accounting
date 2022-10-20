@@ -8,6 +8,8 @@ import java.util.Objects;
 @Table(name="currency")
 public class Currency extends EntityObject {
 
+    private static final long serialVersionUID = 100001L;
+
     @Id
     @Column(name = "code")
     private String code;

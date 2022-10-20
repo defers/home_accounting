@@ -11,3 +11,12 @@
          <a href="${path}\${code}\delete" class="btn" id="delete">Delete</a>
      </div>
 </#macro>
+
+<#macro pageNumbers pathPages>
+    <div class="page-numbers">
+        <span>Page:</span>
+        <#list pathPages as propName, propValue>
+            <a href=${propValue} class="page-numbers--page">${propName}</a>
+        </#list>
+    </div>
+</#macro>

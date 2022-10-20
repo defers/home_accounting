@@ -24,7 +24,7 @@
             <div class="card">
                 <@macrosfields.cardField id="id" fieldName="Id" value="${entity.id}"/>
                 <@macrosfields.cardField id="name" fieldName="Name" value="${entity.name}"/>
-                <@macrosfields.cardField id="transactionType" fieldName="Transaction type" value="${entity.transactionType}"/>
+                <@macrosfields.cardField id="active" fieldName="Active" value="${entity.active?c}"/>
                 <@macrosfields.cardField id="deleted" fieldName="Deleted" value="${entity.deleted?c}"/>
                 <@macrosfields.cardField id="createdDate" fieldName="Created date" value="${(entity.createdDate).format('yyyy-MM-dd HH:mm:ss')}"/>
                 <@macrosfields.cardField id="updatedDate" fieldName="Updated date" value="${(entity.updatedDate).format('yyyy-MM-dd HH:mm:ss')}"/>

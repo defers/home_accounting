@@ -15437,3 +15437,681 @@ create sequence payee_id_seq start 1 increment 10;
        add constraint FKaw5ne4wf39unmp1t0a1fkl459 
        foreign key (currency_id) 
        references currency;
+
+    create table currency_rate (
+       date timestamp not null,
+        rate float4,
+        currency_id varchar(255) not null,
+        primary key (currency_id, date)
+    );
+
+    create table payee (
+       id int8 not null,
+        created_date timestamp,
+        is_deleted boolean,
+        name varchar(255) not null,
+        updated_date timestamp,
+        is_active boolean,
+        primary key (id)
+    );
+create sequence payee_id_seq start 1 increment 10;
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    create table currency_rate (
+       date timestamp not null,
+        rate float4,
+        currency_id varchar(255) not null,
+        primary key (currency_id, date)
+    );
+
+    create table payee (
+       id int8 not null,
+        created_date timestamp,
+        is_deleted boolean,
+        name varchar(255) not null,
+        updated_date timestamp,
+        is_active boolean,
+        primary key (id)
+    );
+create sequence payee_id_seq start 1 increment 10;
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    create table currency_rate (
+       date timestamp not null,
+        rate float4,
+        currency_id varchar(255) not null,
+        primary key (currency_id, date)
+    );
+
+    create table payee (
+       id int8 not null,
+        created_date timestamp,
+        is_deleted boolean,
+        name varchar(255) not null,
+        updated_date timestamp,
+        is_active boolean,
+        primary key (id)
+    );
+create sequence payee_id_seq start 1 increment 10;
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    create table currency_rate (
+       date timestamp not null,
+        rate float4,
+        currency_id varchar(255) not null,
+        primary key (currency_id, date)
+    );
+
+    create table payee (
+       id int8 not null,
+        created_date timestamp,
+        is_deleted boolean,
+        name varchar(255) not null,
+        updated_date timestamp,
+        is_active boolean,
+        primary key (id)
+    );
+create sequence payee_id_seq start 1 increment 10;
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    create table currency_rate (
+       date timestamp not null,
+        rate float4,
+        currency_id varchar(255) not null,
+        primary key (currency_id, date)
+    );
+
+    create table payee (
+       id int8 not null,
+        created_date timestamp,
+        is_deleted boolean,
+        name varchar(255) not null,
+        updated_date timestamp,
+        is_active boolean,
+        primary key (id)
+    );
+create sequence payee_id_seq start 1 increment 10;
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    create table currency_rate (
+       date timestamp not null,
+        rate float4,
+        currency_id varchar(255) not null,
+        primary key (currency_id, date)
+    );
+
+    create table payee (
+       id int8 not null,
+        created_date timestamp,
+        is_deleted boolean,
+        name varchar(255) not null,
+        updated_date timestamp,
+        is_active boolean,
+        primary key (id)
+    );
+create sequence payee_id_seq start 1 increment 10;
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    create table currency_rate (
+       date timestamp not null,
+        rate float4,
+        currency_id varchar(255) not null,
+        primary key (currency_id, date)
+    );
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    create table currency_rate (
+       date timestamp not null,
+        rate float4,
+        currency_id varchar(255) not null,
+        primary key (currency_id, date)
+    );
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    create table currency_rate (
+       date timestamp not null,
+        rate float4,
+        currency_id varchar(255) not null,
+        primary key (currency_id, date)
+    );
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    create table currency_rate (
+       date timestamp not null,
+        rate float4,
+        currency_id varchar(255) not null,
+        primary key (currency_id, date)
+    );
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    create table currency_rate (
+       date timestamp not null,
+        rate float4,
+        currency_id varchar(255) not null,
+        primary key (currency_id, date)
+    );
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    create table currency_rate (
+       date timestamp not null,
+        rate float4,
+        currency_id varchar(255) not null,
+        primary key (currency_id, date)
+    );
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    create table currency_rate (
+       date timestamp not null,
+        rate float4,
+        currency_id varchar(255) not null,
+        primary key (currency_id, date)
+    );
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    create table currency_rate (
+       date timestamp not null,
+        rate float4,
+        currency_id varchar(255) not null,
+        primary key (currency_id, date)
+    );
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    create table currency_rate (
+       date timestamp not null,
+        rate float4,
+        currency_id varchar(255) not null,
+        primary key (currency_id, date)
+    );
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    create table currency_rate (
+       date timestamp not null,
+        rate float4,
+        currency_id varchar(255) not null,
+        primary key (currency_id, date)
+    );
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    create table currency_rate (
+       date timestamp not null,
+        rate float4,
+        currency_id varchar(255) not null,
+        primary key (currency_id, date)
+    );
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    create table currency_rate (
+       date timestamp not null,
+        rate float4,
+        currency_id varchar(255) not null,
+        primary key (currency_id, date)
+    );
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    create table currency_rate (
+       date timestamp not null,
+        rate float4,
+        currency_id varchar(255) not null,
+        primary key (currency_id, date)
+    );
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    create table currency_rate (
+       date timestamp not null,
+        rate float4,
+        currency_id varchar(255) not null,
+        primary key (currency_id, date)
+    );
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    create table currency_rate (
+       date timestamp not null,
+        rate float4,
+        currency_id varchar(255) not null,
+        primary key (currency_id, date)
+    );
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    create table currency_rate (
+       date timestamp not null,
+        rate float4,
+        currency_id varchar(255) not null,
+        primary key (currency_id, date)
+    );
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    create table currency_rate (
+       date timestamp not null,
+        rate float4,
+        currency_id varchar(255) not null,
+        primary key (currency_id, date)
+    );
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    create table currency_rate (
+       date timestamp not null,
+        rate float4,
+        currency_id varchar(255) not null,
+        primary key (currency_id, date)
+    );
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    create table currency_rate (
+       date timestamp not null,
+        rate float4,
+        currency_id varchar(255) not null,
+        primary key (currency_id, date)
+    );
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    create table currency_rate (
+       date timestamp not null,
+        rate float4,
+        currency_id varchar(255) not null,
+        primary key (currency_id, date)
+    );
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    create table currency_rate (
+       date timestamp not null,
+        rate float4,
+        currency_id varchar(255) not null,
+        primary key (currency_id, date)
+    );
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    create table currency_rate (
+       date timestamp not null,
+        rate float4,
+        currency_id varchar(255) not null,
+        primary key (currency_id, date)
+    );
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    create table currency_rate (
+       date timestamp not null,
+        rate float4,
+        currency_id varchar(255) not null,
+        primary key (currency_id, date)
+    );
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    create table currency_rate (
+       date timestamp not null,
+        rate float4,
+        currency_id varchar(255) not null,
+        primary key (currency_id, date)
+    );
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    create table currency_rate (
+       date timestamp not null,
+        rate float4,
+        currency_id varchar(255) not null,
+        primary key (currency_id, date)
+    );
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    create table currency_rate (
+       date timestamp not null,
+        rate float4,
+        currency_id varchar(255) not null,
+        primary key (currency_id, date)
+    );
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    create table currency_rate (
+       date timestamp not null,
+        rate float4,
+        currency_id varchar(255) not null,
+        primary key (currency_id, date)
+    );
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    create table currency_rate (
+       date timestamp not null,
+        rate float4,
+        currency_id varchar(255) not null,
+        primary key (currency_id, date)
+    );
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    create table currency_rate (
+       date timestamp not null,
+        rate float4,
+        currency_id varchar(255) not null,
+        primary key (currency_id, date)
+    );
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    create table currency_rate (
+       date timestamp not null,
+        rate float4,
+        currency_id varchar(255) not null,
+        primary key (currency_id, date)
+    );
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;

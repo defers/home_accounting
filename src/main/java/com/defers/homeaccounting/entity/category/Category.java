@@ -15,6 +15,8 @@ import javax.persistence.*;
 @Entity
 public class Category extends EntityObject {
 
+    private static final long serialVersionUID = 100001L;
+
     @Id
     @Column(name = "id")
     @SequenceGenerator(name = "id_generator", sequenceName = "category_id_seq", allocationSize = 1)

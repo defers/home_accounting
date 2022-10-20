@@ -15,9 +15,11 @@ import javax.persistence.*;
 @Table(name = "payee")
 public class Payee extends EntityObject {
 
+    private static final long serialVersionUID = 100001L;
+
     @Id
     @Column(name = "id")
-    @SequenceGenerator(name = "id_generator", sequenceName = "payee_id_seq", allocationSize = 10)
+    @SequenceGenerator(name = "id_generator", sequenceName = "payee_id_seq", allocationSize = 1)
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "id_generator")
     private Long id;
 

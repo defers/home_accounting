@@ -19,6 +19,8 @@ import javax.validation.constraints.NotNull;
 @Entity
 public class Account extends EntityObject {
 
+    private static final long serialVersionUID = 100001L;
+
     @Id
     @Column(name = "id")
     @SequenceGenerator(name = "id_generator", sequenceName = "account_id_seq", allocationSize = 1)

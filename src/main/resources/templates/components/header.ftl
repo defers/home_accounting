@@ -12,6 +12,15 @@
         <li class="list-menu__element" name="category">
             <a href="/category">Category</a>
         </li>
+        <li class="list-menu__element" name="category">
+            <a href="/payee">Payee</a>
+        </li>
+        <li class="list-menu__element" name="category">
+            <a href="/currencyrate">Currency rate</a>
+        </li>
     </ul>
+    <div class="burger-btn-container">
+        <div class="burger-btn"></div>
+    </div>
 
 </header>
