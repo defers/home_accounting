@@ -2,30 +2,33 @@ package com.defers.homeaccounting.entity.category;
 
 import com.defers.homeaccounting.entity.baseentity.IEntityService;
 import com.defers.homeaccounting.entity.category.dto.CategoryDTO;
+import com.defers.homeaccounting.exception.MyEntityNotFoundException;
 import com.defers.homeaccounting.utils.Exceptions;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.CacheManager;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
-
-import javax.persistence.EntityNotFoundException;
 import javax.transaction.Transactional;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
+import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
 
 @Service
 public class CategoryService implements IEntityService<Category> {
 
-    private CategoryRepo categoryRepo;
+    private final CategoryRepo categoryRepo;
+    private final CacheManager cacheManager;
 
-    @Autowired
-    public CategoryService(CategoryRepo categoryRepo) {
+    public CategoryService(CategoryRepo categoryRepo, CacheManager cacheManager) {
         this.categoryRepo = categoryRepo;
+        this.cacheManager = cacheManager;
     }
 
     @Transactional
@@ -35,7 +38,7 @@ public class CategoryService implements IEntityService<Category> {
     }
 
     @Transactional
-    public Page<Category> findAllByPage(int page, int size) {
+    public Page<Category> findAllByPage(int page, int size) throws InterruptedException {
         Pageable pageable = PageRequest.of(page, size,
                 Sort.by(Sort.Direction.ASC, "id"));
         Page<Category> categorys = categoryRepo.findAll(pageable);
@@ -49,6 +52,7 @@ public class CategoryService implements IEntityService<Category> {
         return categoryRepo.save(entity);
     }
 
+    @CacheEvict(value = "category", allEntries = true)
     @Transactional
     public Category saveDTO(CategoryDTO dto) {
 
@@ -57,12 +61,14 @@ public class CategoryService implements IEntityService<Category> {
         return entity;
     }
 
+    @CacheEvict(value = "category", allEntries = true)
     @Transactional
     @Override
     public void delete(Category entity) {
         categoryRepo.delete(entity);
     }
 
+    @CacheEvict(value = "category", allEntries = true)
     @Transactional
     @Override
     public void setDelete(Long id) {
@@ -73,6 +79,11 @@ public class CategoryService implements IEntityService<Category> {
     @Transactional
     public Category findById(Long id) {
 
+        try {
+            TimeUnit.SECONDS.sleep(2);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         Category entity = null;
         Optional<Category> categoryOpt = categoryRepo.findById(id);
 
@@ -80,12 +91,13 @@ public class CategoryService implements IEntityService<Category> {
             entity = categoryOpt.get();
         }
         else {
-            Exceptions.throwException(EntityNotFoundException.class,
+            Exceptions.throwException(MyEntityNotFoundException.class,
                     "Category with id: %s not found",  id);
         }
         return entity;
     }
 
+    @Cacheable(value = "category", key = "#id")
     public CategoryDTO findDTOById(Long id) {
         return convertToDTO(findById(id));
     }

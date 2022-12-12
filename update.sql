@@ -16115,3 +16115,2256 @@ create sequence payee_id_seq start 1 increment 10;
        add constraint FKaw5ne4wf39unmp1t0a1fkl459 
        foreign key (currency_id) 
        references currency;
+
+    create table currency_rate (
+       date timestamp not null,
+        rate float4,
+        currency_id varchar(255) not null,
+        primary key (currency_id, date)
+    );
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    create table currency_rate (
+       date timestamp not null,
+        rate float4,
+        currency_id varchar(255) not null,
+        primary key (currency_id, date)
+    );
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    create table currency_rate (
+       date timestamp not null,
+        id int8,
+        rate float4,
+        currency_id varchar(255) not null,
+        primary key (currency_id, date)
+    );
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       add column rate float4;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;
+
+    alter table if exists currency_rate 
+       drop constraint if exists UK2f2hn7moqx70uj7vw7x88kag0;
+
+    alter table if exists currency_rate 
+       add constraint UK2f2hn7moqx70uj7vw7x88kag0 unique (id);
+
+    alter table if exists category 
+       add constraint FK2y94svpmqttx80mshyny85wqr 
+       foreign key (parent_id) 
+       references category;
+
+    alter table if exists currency_rate 
+       add constraint FKaw5ne4wf39unmp1t0a1fkl459 
+       foreign key (currency_id) 
+       references currency;

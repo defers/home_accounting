@@ -3,18 +3,23 @@ package com.defers.homeaccounting.entity.currencyrate;
 import com.defers.homeaccounting.entity.currency.Currency;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import java.io.Serializable;
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.Objects;
 
 @Entity
+@Builder
 @AllArgsConstructor
+@NoArgsConstructor
 @Table(name = "currency_rate",
-        uniqueConstraints = {@UniqueConstraint(columnNames = {"date", "currency_id"})})
+        uniqueConstraints = {@UniqueConstraint(columnNames = {"date", "currency_id"}),
+                @UniqueConstraint(columnNames = {"id"})})
 public class CurrencyRate implements Serializable {
 
     private static final long serialVersionUID = 100001L;
@@ -22,16 +27,27 @@ public class CurrencyRate implements Serializable {
     @EmbeddedId
     private CurrencyRateId currencyRateId;
 
+    @SequenceGenerator(name = "id_generator", sequenceName = "currency_rate_id_seq", allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "id_generator")
+    @Column(name = "id")
+    private long id;
+
     @Column(name = "rate")
-    private float rate;
+    private BigDecimal rate;
 
-    public CurrencyRate(){}
+    public long getId() {
+        return id;
+    }
 
-    public float getRate() {
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public BigDecimal getRate() {
         return rate;
     }
 
-    public void setRate(int theRate) {
+    public void setRate(BigDecimal theRate) {
         rate = theRate;
     }
 
@@ -48,8 +64,9 @@ public class CurrencyRate implements Serializable {
         if (this == o) return true;
         if (!(o instanceof CurrencyRate)) return false;
         CurrencyRate that = (CurrencyRate) o;
-        return Float.compare(that.rate, rate) == 0 &&
-                currencyRateId.equals(that.currencyRateId);
+        return id == that.id &&
+                currencyRateId.equals(that.currencyRateId) &&
+                rate.equals(that.rate);
     }
 
     @Override
@@ -61,28 +78,23 @@ public class CurrencyRate implements Serializable {
         return new CurrencyRateBuilder();
     }
 
-    private static class CurrencyRateBuilder {
+    public static class CurrencyRateBuilder {
         private LocalDateTime date;
-        private Currency currency;
-        private float rate;
+        private CurrencyRateId currencyRateId;
+        private BigDecimal rate;
 
-        public CurrencyRateBuilder date(LocalDateTime date) {
-            this.date = date;
+        public CurrencyRateBuilder currencyRateId(CurrencyRateId currencyRateId) {
+            this.currencyRateId = currencyRateId;
             return this;
         }
 
-        public CurrencyRateBuilder currency(Currency currency) {
-            this.currency = currency;
-            return this;
-        }
-
-        public CurrencyRateBuilder rate(float rate){
+        public CurrencyRateBuilder rate(BigDecimal rate){
             this.rate = rate;
             return this;
         }
 
         public CurrencyRate build() {
-            return new CurrencyRate(new CurrencyRateId(date, currency), rate);
+            return new CurrencyRate(currencyRateId, id, rate);
         }
     }
 

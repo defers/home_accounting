@@ -84,7 +84,7 @@ ul {
     transition: all ease-in-out 0.5s;
   }
   .burger-btn-container.active-burger-btn .burger-btn::before {
-    display: none;
+    background-color: rgba(255, 255, 255, 0);
     transition: all ease-in-out 0.5s;
   }
   .burger-btn {

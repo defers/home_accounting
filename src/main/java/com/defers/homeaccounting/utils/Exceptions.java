@@ -17,12 +17,16 @@ public class Exceptions {
         T newEx = null;
 
         try {
-            newEx = ex.getConstructor().newInstance(msgException);
+            Class[] cArg = new Class[1];
+            cArg[0] = String.class;
+            newEx = ex.getConstructor(cArg).newInstance(msgException);
         }catch (NoSuchMethodException |
                 IllegalAccessException |
                 InvocationTargetException |
+                IllegalArgumentException |
                 InstantiationException e) {
             e.printStackTrace();
+            throw new RuntimeException("Can't create instance exception");
         }
         return newEx;
     }

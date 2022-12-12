@@ -15,10 +15,10 @@
             <label for="name" class="form-entity__label">Name: </label>
             <@spring.formInput "category.name" "class='form-entity__field'"/>
         </div>
-<#--        <div class="form-entity__field-container">-->
-<#--            <label for="parrentId" class="form-entity__label">Parent: </label>-->
-<#--            <@spring.formSingleSelect "category.parrentId", categoryOptions, "class='form-entity__field'"/>-->
-<#--        </div>-->
+        <div class="form-entity__field-container">
+            <label for="parentId" class="form-entity__label">Parent: </label>
+            <@spring.formSingleSelect "category.parentId", categoryOptions, "class='form-entity__field'"/>
+        </div>
         <div class="form-entity__field-container">
             <label for="transactionType" class="form-entity__label">Transaction type: </label>
             <@spring.formSingleSelect "category.transactionType", transactionTypes, "class='form-entity__field'"/>

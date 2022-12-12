@@ -1,0 +1,1 @@
+alter table currency_rate alter column currency_id type varchar(150);

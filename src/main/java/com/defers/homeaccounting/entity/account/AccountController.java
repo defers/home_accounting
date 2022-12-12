@@ -2,6 +2,7 @@ package com.defers.homeaccounting.entity.account;
 
 import com.defers.homeaccounting.entity.account.dto.AccountDTO;
 import com.defers.homeaccounting.entity.currency.CurrencyService;
+import com.defers.homeaccounting.exception.MyEntityNotFoundException;
 import com.defers.homeaccounting.utils.Messages;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -10,7 +11,6 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import javax.persistence.EntityNotFoundException;
 import javax.validation.Valid;
 import java.util.*;
 
@@ -70,7 +70,7 @@ public final class AccountController {
     public String deleteEntity(Long id, RedirectAttributes redirectAttrs) {
         try {
             accountService.setDelete(id);
-        }catch (EntityNotFoundException ex) {
+        }catch (MyEntityNotFoundException ex) {
             redirectAttrs.addFlashAttribute("error", ex.getMessage());
         }
         return "redirect:/account";

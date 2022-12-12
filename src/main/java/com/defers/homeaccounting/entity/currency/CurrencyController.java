@@ -1,6 +1,7 @@
 package com.defers.homeaccounting.entity.currency;
 
 import com.defers.homeaccounting.entity.currency.dto.CurrencyDTO;
+import com.defers.homeaccounting.exception.MyEntityNotFoundException;
 import com.defers.homeaccounting.utils.Messages;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -9,7 +10,6 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import javax.persistence.EntityNotFoundException;
 import javax.validation.Valid;
 import java.util.List;
 
@@ -62,7 +62,7 @@ public class CurrencyController {
     public String deleteCurrency(@PathVariable String code, RedirectAttributes redirectAttrs) {
         try {
             currencyService.delete(code);
-        }catch (EntityNotFoundException ex) {
+        }catch (MyEntityNotFoundException ex) {
             redirectAttrs.addFlashAttribute("error", ex.getMessage());
         }
         return "redirect:/currency";

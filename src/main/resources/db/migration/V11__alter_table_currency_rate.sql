@@ -1,0 +1,1 @@
+alter table currency_rate add column rate numeric;

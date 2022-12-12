@@ -2,6 +2,7 @@ package com.defers.homeaccounting.entity.payee;
 
 import com.defers.homeaccounting.entity.baseentity.IEntityService;
 import com.defers.homeaccounting.entity.payee.dto.PayeeDTO;
+import com.defers.homeaccounting.exception.MyEntityNotFoundException;
 import com.defers.homeaccounting.utils.Exceptions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -10,7 +11,6 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
-import javax.persistence.EntityNotFoundException;
 import javax.transaction.Transactional;
 import java.util.List;
 import java.util.Map;
@@ -77,7 +77,7 @@ public class PayeeService implements IEntityService<Payee> {
             entity = categoryOpt.get();
         }
         else {
-            Exceptions.throwException(EntityNotFoundException.class,
+            Exceptions.throwException(MyEntityNotFoundException.class,
                     "Payee with id: %s not found",  id);
         }
         return entity;

@@ -1,6 +1,7 @@
 package com.defers.homeaccounting.entity.payee;
 
 import com.defers.homeaccounting.entity.payee.dto.PayeeDTO;
+import com.defers.homeaccounting.exception.MyEntityNotFoundException;
 import com.defers.homeaccounting.utils.ControllerUtils;
 import com.defers.homeaccounting.utils.Messages;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +12,6 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import javax.persistence.EntityNotFoundException;
 import javax.validation.Valid;
 import java.util.List;
 import java.util.Map;
@@ -82,7 +82,7 @@ public class PayeeController {
     public String deleteEntity(@PathVariable Long id, RedirectAttributes redirectAttrs) {
         try {
             payeeService.setDelete(id);
-        }catch (EntityNotFoundException ex) {
+        }catch (MyEntityNotFoundException ex) {
             redirectAttrs.addFlashAttribute("error", ex.getMessage());
         }
         return "redirect:/payee";

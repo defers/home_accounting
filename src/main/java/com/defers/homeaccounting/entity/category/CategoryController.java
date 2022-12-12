@@ -2,6 +2,7 @@ package com.defers.homeaccounting.entity.category;
 
 import com.defers.homeaccounting.entity.category.dto.CategoryDTO;
 import com.defers.homeaccounting.enums.TransactionType;
+import com.defers.homeaccounting.exception.MyEntityNotFoundException;
 import com.defers.homeaccounting.utils.ControllerUtils;
 import com.defers.homeaccounting.utils.Messages;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,7 +13,6 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import javax.persistence.EntityNotFoundException;
 import javax.validation.Valid;
 import java.util.*;
 
@@ -30,7 +30,7 @@ public final class CategoryController {
     @GetMapping
     public String listAllCategory(@RequestParam(required = false, defaultValue = "0") int page,
                                   @RequestParam(required = false, defaultValue = "6") int size,
-                                  Model model) {
+                                  Model model) throws InterruptedException {
 
         Page<Category> pageCategory = categoryService.findAllByPage(page, size);
         List<Category> entitys = pageCategory.getContent();
@@ -51,8 +51,15 @@ public final class CategoryController {
     }
 
     @GetMapping(path = "/{id}/edit")
-    public String editEntity(Model model, @PathVariable Long id) {
-        CategoryDTO category = categoryService.findDTOById(id);
+    public String editEntity(Model model, @PathVariable Long id, RedirectAttributes redirectAttrs) {
+        CategoryDTO category = null;
+        try{
+            category = categoryService.findDTOById(id);
+        } catch (MyEntityNotFoundException ex) {
+            redirectAttrs.addFlashAttribute("error", ex.getMessage());
+            return "redirect:/category";
+        }
+
         Map<String, String> categoryOptions = categoryService.findAllMapValues();
 
         model.addAttribute("categoryOptions", categoryOptions);
@@ -85,7 +92,7 @@ public final class CategoryController {
     public String deleteEntity(@PathVariable Long id, RedirectAttributes redirectAttrs) {
         try {
             categoryService.setDelete(id);
-        }catch (EntityNotFoundException ex) {
+        }catch (MyEntityNotFoundException ex) {
             redirectAttrs.addFlashAttribute("error", ex.getMessage());
         }
         return "redirect:/category";

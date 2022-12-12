@@ -3,6 +3,7 @@ package com.defers.homeaccounting.entity.account;
 import com.defers.homeaccounting.entity.account.dto.AccountDTO;
 import com.defers.homeaccounting.entity.baseentity.IEntityService;
 import com.defers.homeaccounting.entity.currency.CurrencyService;
+import com.defers.homeaccounting.exception.MyEntityNotFoundException;
 import com.defers.homeaccounting.utils.Exceptions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -10,7 +11,6 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
-import javax.persistence.EntityNotFoundException;
 import javax.transaction.Transactional;
 import java.util.List;
 import java.util.Optional;
@@ -45,7 +45,7 @@ public class AccountService implements IEntityService<Account> {
     }
 
     @Transactional
-    public Optional<Page<Account>> findAllWithPages(int countOnPage) {
+    public Optional<Page<Account>> findAllWithPages(int countOnPage) throws InterruptedException {
         Pageable pages = PageRequest.of(0, countOnPage);
         Optional<Page<Account>> accPages = Optional.ofNullable(accountRepo.findAll(pages));
         return accPages;
@@ -81,7 +81,7 @@ public class AccountService implements IEntityService<Account> {
     }
 
     @Transactional
-    public Account findById(Long id) throws EntityNotFoundException{
+    public Account findById(Long id) throws MyEntityNotFoundException {
 
         Account acc = null;
 
@@ -89,7 +89,7 @@ public class AccountService implements IEntityService<Account> {
         if (accOptional.isPresent()) {
             acc = accOptional.get();
         } else {
-            Exceptions.throwException(EntityNotFoundException.class, "%s with id: %s not found",
+            Exceptions.throwException(MyEntityNotFoundException.class, "%s with id: %s not found",
                     Account.class.getName(), id);
         }
         return acc;
